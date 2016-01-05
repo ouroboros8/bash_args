@@ -3,13 +3,13 @@ function err {
 }
 
 function usage {
-  err "Usage: bash test.bash hello|bye [OPTIONS]"
+  err "Usage: $0 hello|bye [OPTIONS]"
   exit 1
 }
 
 function hello {
   function usage {
-    err "Usage bash test.bash hello [--formal] [--lower-case] [--upper-case]"
+    err "Usage $0 hello [--formal] [--lower-case] [--upper-case]"
     exit 1
   }
   message="Hello."
@@ -35,7 +35,7 @@ function hello {
 
 function bye {
   function usage {
-    echo "Usage bash test.bash goodbye [--formal] [--lower-case] [--upper-case]"
+    echo "Usage $0 goodbye [--formal] [--lower-case] [--upper-case]"
     exit 1
   }
   $message="Bye."
